@@ -5,15 +5,17 @@
 <p align='center'>
 <img src='image/1.gif' title='images' style='max-width:600px'></img>
 </p>
+
+简书地址: https://www.jianshu.com/p/8315423c9246
  (2个工具类kotlin写的  其他页面也有用java  赶时间 有点混搭- -)
 
   如果用的网络url需要自己做缓存 或者先下载到本地  避免浪费流量
 
    用法:
-<font size="40">我复制util目录下的2个文件</font>
+复制util目录下的2个文件
 
 
-        AudioUtil 关键方法:
+       AudioUtil 关键的3个方法:
                             1.播放类型 初始化的时候设置
                             AudioUtil.Companion.getTYPE_RAW();  //raw路径,要转成String传递   比如 R.raw.justDoit +""
                            AudioUtil.Companion.getTYPE_ASSETS(); //assets路径 比如  "你听得到-周杰伦.mp3"
@@ -24,11 +26,11 @@
         1.初始化方法
             udioUtil = new AudioUtil(AudioUtil.Companion.getTYPE_RAW());//初始化 指定类型
 
-        1.播放前的准备
+        2.播放前的准备
             audioUtil.ready(activity(可改为fragment), 是否重复播放,path ,监听器)
 
 
-        2.首次播放方法,进度和总时长都是秒.
+        3.首次播放方法,进度和总时长都是秒.
             audioUtil.play(当前进度(没有则传0), 总时长(没有则传0), 播放监听);
 
 
