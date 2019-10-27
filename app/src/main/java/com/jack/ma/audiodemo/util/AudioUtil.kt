@@ -326,9 +326,11 @@ class AudioUtil {
 
     companion object {
 
-        var TYPE_URLorFILE = 1
-        var TYPE_ASSETS = 2
-        var TYPE_RAW = 3
+        val TYPE_URLorFILE = 1
+
+        val TYPE_ASSETS = 2
+
+        val TYPE_RAW = 3
 
         /**
          * 将秒数转为中文 不是毫秒  例如  1秒  5分钟

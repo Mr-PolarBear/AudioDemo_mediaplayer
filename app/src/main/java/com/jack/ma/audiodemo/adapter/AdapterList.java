@@ -141,8 +141,6 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHoder> {
                 playView.setImageResource(PAUSE_IMG);
                 bBview.stop();
             }
-
-
         }
     }
 }
