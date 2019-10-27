@@ -6,8 +6,12 @@
 <img src='image/1.gif' title='images' style='max-width:600px'></img>
 </p>
  (2个工具类kotlin写的  其他页面也有用java  赶时间 有点混搭- -)
-用法:
-   复制util目录下的2个文件
+
+  如果用的网络url需要自己做缓存 或者先下载到本地  避免浪费流量
+
+   用法:
+<font size="40">我复制util目录下的2个文件</font>
+
 
         AudioUtil 关键方法:
                             1.播放类型 初始化的时候设置
@@ -15,7 +19,7 @@
                            AudioUtil.Companion.getTYPE_ASSETS(); //assets路径 比如  "你听得到-周杰伦.mp3"
                            AudioUtil.Companion.getTYPE_URLorFILE();   //可以是文件或者网络url
 
-        string path =  R.raw.hanguo
+        string path =  R.raw.hanguo+""
 
         1.初始化方法
             udioUtil = new AudioUtil(AudioUtil.Companion.getTYPE_RAW());//初始化 指定类型
