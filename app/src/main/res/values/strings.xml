@@ -1,4 +1,4 @@
 <resources>
-    <string name="audio封装工具">AudioDemo</string>
+    <string name="app_name">audio封装工具</string>
     <string name="action_settings">Settings</string>
 </resources>
