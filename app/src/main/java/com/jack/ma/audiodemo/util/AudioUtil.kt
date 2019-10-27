@@ -312,6 +312,18 @@ class AudioUtil {
 
     }
 
+    //重新播放
+    fun resetPlay() {
+        if (isPlaying()) {
+            mMediaPlayer?.seekTo(0)
+        } else {
+            mMediaPlayer?.start()
+            mMediaPlayer?.seekTo(0)
+        }
+
+    }
+
+
     @Synchronized
     fun onDestory() {
         if (mMediaPlayer != null) {
