@@ -17,7 +17,7 @@
 
        AudioUtil 关键的3个方法:
                             1.播放类型 初始化的时候设置
-                            AudioUtil.Companion.getTYPE_RAW();  //raw路径,要转成String传递   比如 R.raw.justDoit +""
+                           AudioUtil.Companion.getTYPE_RAW();  //raw路径,要转成String传递   比如 R.raw.justDoit +""
                            AudioUtil.Companion.getTYPE_ASSETS(); //assets路径 比如  "你听得到-周杰伦.mp3"
                            AudioUtil.Companion.getTYPE_URLorFILE();   //可以是文件或者网络url
 

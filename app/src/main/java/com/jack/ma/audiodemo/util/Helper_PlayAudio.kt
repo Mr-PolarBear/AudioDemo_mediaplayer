@@ -172,7 +172,7 @@ class Helper_PlayAudio {
             //设置seekbar的拖动事件
             seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                    if (mediap == null || seekBar == null || audioUtil.mIsError || !audioUtil.mIsReady) return
+                    if (mediap == null || audioUtil.mIsError || !audioUtil.mIsReady) return
                     //数值改变
                     if (mIsManual && id == mPlayingId)
                         mediap.seekTo(mediap.duration / 100 * progress)
