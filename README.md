@@ -36,7 +36,7 @@
 
 
    单独播放音乐示例:
-
+        (1)最简单一个按钮的那种
          AudioUtil audioUtil;
 
          private void initMedia(Button bt) { //点击事件示例  传递的参数根据项目而定
@@ -78,6 +78,44 @@
                }
 
            }
+    (2)有进度条 播放时间的一条的那种
+        fun initAudio() {
+
+         //1.初始化 相关
+         tv_order_detail_time1.text = ""
+         tv_order_detail_time2.text = audioBean?.duration
+         setImage(false)
+
+
+         //2.播放与暂停的回调
+         val listener = object : AudioUtil.onPlayListener {
+         override fun onPlay(isPlay: Boolean) {
+         //播放 与暂停ui需要做什么
+             setImage(isPlay)
+           }
+       }
+
+      //3.点击事件
+       ll_order_detail_vioce_line.setOnClickListener { v ->
+        //4.初始化并播放
+        Helper_PlayAudio.toPlayer(
+                mAudioUtil,
+                mActivity,
+                audioBean,
+                true,
+                进度条seekbar,
+                动画view,
+                tv_order_detail_time1,
+                tv_order_detail_time2,
+                null,
+                listener
+          )
+
+       }
+
+      }
+
+
 
 
 
@@ -138,7 +176,7 @@
 
         });
 
-          viewhoder中的方法 也可写在其他地方如adapter中  根据需要自己调整
+          viewhoder中:    也可写在其他地方如adapter中  根据需要自己调整
 
          //根据当前播放是不是本条 再图标变换
           public void setImage(boolean isMe, AudioUtil util) {
